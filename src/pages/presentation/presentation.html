@@ -1,0 +1,63 @@
+<!--
+  Generated template for the PresentationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+    <ion-navbar>
+        <ion-buttons end *ngIf="showSkip">
+            <button ion-button (click)="startApp()" color="primary">Passer</button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+
+    <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+        <ion-slide>
+            <img src="assets/im4.png" class="slide-image" />
+            <h2 class="slide-title">
+                Bienvenue chez <b>Nous</b>
+            </h2>
+            <p>
+                Cette <b>application</b> permet d'enregistrer les informations des etudiants.
+            </p>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/im1.jpg" class="slide-image" />
+            <h2 class="slide-title">Pour quel but?</h2>
+            <p><b>Bonne question</b> Et bien cette application est vue comme un exercice.</p>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/im2.jpg" class="slide-image" />
+            <h2 class="slide-title">Nos impressions?</h2>
+            <p><b>Un bon debut!</b> Nous sommes fiers de travailler sur cette platform. Ce n'est pas facile vu le manque des documentations mais on fait des efforts.</p>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/im3.jpg" class="slide-image" />
+            <h2 class="slide-title"> Prets?</h2>
+            <button ion-button icon-end large clear (click)="startApp()">
+        Continuer
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+        </ion-slide>
+
+
+
+
+
+
+    </ion-slides>
+
+
+
+
+</ion-content>

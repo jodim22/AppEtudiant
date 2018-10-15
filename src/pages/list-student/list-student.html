@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Liste des etudiants</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addNewStudent()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+
+    <div class="welcome-header">
+        <div class="content">
+            <div class="title">Liste des Etudiants</div>
+            <div class="subtitle">Trouvez tous les etudiants enregistres</div>
+        </div>
+        <button ion-fab color="dark" class="refresh"><ion-icon name="md-refresh"></ion-icon></button>
+    </div>
+    <div class="body" padding>
+        <div class="currencies">
+            <ion-list class="currency" *ngFor="let st of Students">
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src={{st.photoEtudiant}}>
+                    </ion-avatar>
+                    <button ion-item (click)="onProfil(st.idEtudiant)">{{st.nomEtudiant}} {{st.postnomEtudiant}}</button>
+
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>

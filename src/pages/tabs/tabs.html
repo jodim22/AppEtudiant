@@ -1,0 +1,25 @@
+<!-- <ion-header no-shadow no-border>
+    <ion-navbar color="dark">
+        <ion-title>Menu</ion-title>
+    </ion-navbar>
+</ion-header> -->
+
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Menu</ion-title>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <super-tabs id="mainTabs" toolbarColor="light" selectedTabIndex="0" toolbarBackground="primary" indicatorColor="light" badgecolor="light">
+        <super-tab [root]="tab1Root" title="Home" icon="home" id="homeTab"></super-tab>
+        <super-tab [root]="tab2Root" title="About" icon="pin" id="aboutTab"></super-tab>
+        <super-tab [root]="tab3Root" title="Contact" icon="contacts" id="contactTab"></super-tab>
+    </super-tabs>
+</ion-content>

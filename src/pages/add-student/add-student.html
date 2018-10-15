@@ -1,0 +1,133 @@
+<!--
+  Generated template for the AddStudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Ajouter Etudiant</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <ion-avatar (click)="choosePhoto()">
+        <img src="{{myPhoto}}" />
+        <!-- onerror="this.src='assets/profil.png'" -->
+        <button ion-button block color="danger">Choisir photo de couverture</button>
+    </ion-avatar>
+
+
+    <ion-avatar (click)="choosePhoto2()">
+        <img src="{{myPhoto2}}" />
+        <!-- onerror="this.src='assets/profil.png'" -->
+        <button ion-button block color="primary">Choisir photo de profil</button>
+    </ion-avatar>
+
+    <ion-row>
+        <ion-col>
+
+            <ion-list inset>
+
+
+                <ion-item>
+
+
+                    <ion-input name="nom" type="text" [(ngModel)]="nomEtudiant" required="" placeholder="Nom" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <!-- <ion-label>Ville</ion-label> -->
+
+                    <ion-input name="postnom" type="text" [(ngModel)]="postnomEtudiant" required="" placeholder="Postnom" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <!-- <ion-label>Ville</ion-label> -->
+
+                    <ion-input name="prenom" type="text" [(ngModel)]="prenomEtudiant" required="" placeholder="Prenom" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+
+                <ion-item>
+
+
+                    <ion-input name="age" type="number" [(ngModel)]="ageEtudiant" required="" placeholder="Age" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+                <ion-item>
+
+
+                    <ion-input name="sexe" type="text" [(ngModel)]="sexeEtudiant" required="" placeholder="Sexe" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+
+
+                    <ion-input name="promotion" type="text" [(ngModel)]="promotionEtudiant" required="" placeholder="Promotion" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="telephone" type="number" [(ngModel)]="telEtudiant" required="" placeholder="Telephone" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="occupatonion" type="text" [(ngModel)]="occupation" required="" placeholder="Occupation" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="adresse" type="text" [(ngModel)]="adresse" required="" placeholder="Adresse" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="description" type="text" [(ngModel)]="description" required="" placeholder="Description" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="email" type="email" [(ngModel)]="email" required="" placeholder="Email" autocorrect="off" autocapitalize="none"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Departement</ion-label>
+                    <ion-select [(ngModel)]="nomDep" required="" (ionChange)="pickId() ">
+                        <ion-option *ngFor="let dep of Departements">{{dep.nomDepartement}}</ion-option>
+
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+
+
+    <div *ngFor="let id of departement">
+
+        <button ion-button block color="danger" (click)="saveEtudiant(id)">
+  Enregistrer Etudiant
+</button>
+    </div>
+
+
+
+    <!-- <ion-card>
+        <ion-card-header color="danger">
+            <ion-card-title color="primary">
+                Mon Titre
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>
+                Nom : {{signUp.nom}}
+            </p>
+            <p>
+                Postnom : {{signUp.postnom}}
+            </p>
+
+        </ion-card-content>
+    </ion-card> -->
+
+
+
+
+</ion-content>

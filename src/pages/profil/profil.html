@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Profil</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content parallax-header no-bounce class="bg-modal">
+    <div *ngFor="let st of Students">
+        <div class="header-image"><img src="{{st.photocoverEtudiant}}"></div>
+        <div class="main-content" text-wrap text-center>
+            <div class="circular">
+                <ion-avatar>
+                    <img src={{st.photoEtudiant}} style="border-radius:50%; border: solid white;">
+                </ion-avatar>
+            </div>
+            <h2>{{st.nomEtudiant}}</h2>
+            <p>{{st.occupationEtudiant}} &bull; {{st.adresseEtudiant}}</p>
+            <p class="profile-description">{{st.descriptionEtudiant}}</p>
+            <hr>
+            <ion-list no-lines>
+                <ion-item>
+                    <ion-icon name="mail" color="primary" item-start></ion-icon>
+                    <p>Email</p>
+                    {{st.emailEtudiant}}
+                    <a button ion-button href="mailto:{{st.emailEtudiant}}" color="primary" item-end medium>M'ecrire</a>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-start name="call" color="danger"></ion-icon>
+                    <p>Mobile</p>
+                    {{st.telephoneEtudiant}}
+                    <a button ion-button href="tel:{{st.telephoneEtudiant}}" color="danger" item-end medium>Composer</a>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-start name="logo-whatsapp" color="secondary"></ion-icon>
+                    <p>Whatsapp</p>
+                    {{st.telephoneEtudiant}}
+                    <a button ion-button color="secondary" item-end medium href="whatsapp://send?text=Hi from ionic&phone=+{{st.telephoneEtudiant}}&abid=+{{st.telephoneEtudiant}}">Ouvrir</a>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-start name="pin" color="twitter"></ion-icon>
+                    <p>{{st.adresseEtudiant}}</p>
+                </ion-item>
+            </ion-list>
+            <h2>Bientot Dispo</h2>
+            <hr>
+            <a href="#" button ion-button block color="linkedin" icon-start>
+                <ion-icon name='logo-linkedin'></ion-icon>
+                LinkedIn
+            </a>
+            <a href="#" button ion-button block color="fb" icon-start>
+                <ion-icon name='logo-facebook'></ion-icon>
+                Facebook
+            </a>
+            <a href="#" button ion-button block color="danger" icon-start>
+                <ion-icon name='logo-youtube'></ion-icon>
+                Youtube
+            </a>
+        </div>
+        <!-- <div>
+            <img src="{{st.photoEtudiant}}">
+            <br> <img src="{{st.photocoverEtudiant}}">
+        </div> -->
+    </div>
+</ion-content>

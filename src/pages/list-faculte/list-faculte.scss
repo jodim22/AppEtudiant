@@ -1,0 +1,24 @@
+page-list-faculte {
+    .scroll-content {
+        text-align: center;
+    }
+    .content {
+        text-align: center;
+        /* background-image:url("../../assets/imgs/95.JPG"); */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .card {
+        box-shadow: none;
+        background: rgba(232, 230, 230, 0.6px);
+        border-radius: 10px;
+        z-index: 100%;
+    }
+    .item {
+        background: rgba(232, 230, 230, 0px);
+        border: medium none;
+    }
+    ion-input {
+        border-bottom: rgb(15, 83, 230) solid 2px;
+    }
+}

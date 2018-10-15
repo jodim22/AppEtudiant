@@ -1,0 +1,46 @@
+<!--
+  Generated template for the DepartementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Ajouter Departement</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+    <ion-item>
+
+
+        <ion-input name="nomDep" type="text" [(ngModel)]="nomDep" required="" placeholder="Nom Departement" autocorrect="off" autocapitalize="none"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+        <ion-label>Faculte</ion-label>
+        <ion-select [(ngModel)]="nomFac" required="" (ionChange)="pickId() ">
+            <ion-option *ngFor="let fac of facultes">{{fac.nomFaculte}}</ion-option>
+
+        </ion-select>
+    </ion-item>
+
+    <div *ngFor="let id of idfacultes">
+
+        <button ion-button block color="primary" (click)="saveDepart(id)"> Enregistrer La place
+</button>
+    </div>
+
+
+
+
+
+</ion-content>
